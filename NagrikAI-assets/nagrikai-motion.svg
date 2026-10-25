@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="100%" height="220" style="background: transparent; overflow: hidden;">
+  <defs>
+    <!-- Motion Gradients -->
+    <linearGradient id="nagrikGradient" x1="-100%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="#0F382C">
+        <animate attributeName="stop-color" values="#0F382C; #1E6B52; #10B981; #0F382C" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="35%" stop-color="#195A45">
+        <animate attributeName="stop-color" values="#195A45; #10B981; #34D399; #195A45" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#10B981">
+        <animate attributeName="stop-color" values="#10B981; #34D399; #6EE7B7; #10B981" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="70%" stop-color="#2D5A46">
+        <animate attributeName="stop-color" values="#2D5A46; #195A45; #10B981; #2D5A46" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#0F382C">
+        <animate attributeName="stop-color" values="#0F382C; #1E6B52; #10B981; #0F382C" dur="4s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Speed streak gradient -->
+    <linearGradient id="speedStreak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0" />
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="goldStreak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FBBF24" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Motion trail glow -->
+    <filter id="motionGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="kineticShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feOffset dx="-12" dy="2" result="offset" />
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.06   0 0 0 0 0.22   0 0 0 0 0.17  0 0 0 0.25 0" result="colorBlur" />
+      <feMerge>
+        <feMergeNode in="colorBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .kinetic-text {
+        font-family: 'Cinzel', 'Playfair Display', 'Georgia', serif;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .kinetic-sub {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.38em;
+        text-transform: uppercase;
+      }
+      .speed-line-fast {
+        stroke-dasharray: 120 400;
+        animation: speedRush 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .speed-line-med {
+        stroke-dasharray: 80 320;
+        animation: speedRush 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .speed-line-slow {
+        stroke-dasharray: 60 260;
+        animation: speedRush 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      @keyframes speedRush {
+        0% { stroke-dashoffset: 600; opacity: 0; }
+        30% { opacity: 0.85; }
+        80% { opacity: 0.7; }
+        100% { stroke-dashoffset: -400; opacity: 0; }
+      }
+      .motion-trail {
+        transform-origin: center;
+        animation: kineticShift 3.6s ease-in-out infinite alternate;
+      }
+      @keyframes kineticShift {
+        0% { transform: skewX(-11deg) translateX(-4px); }
+        100% { transform: skewX(-9deg) translateX(4px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Kinetic Motion Speed Streaks (Background Lines) -->
+  <g opacity="0.65">
+    <line x1="80" y1="58" x2="920" y2="58" stroke="url(#speedStreak)" stroke-width="2" class="speed-line-fast" />
+    <line x1="160" y1="82" x2="840" y2="82" stroke="url(#speedStreak)" stroke-width="1.5" class="speed-line-med" />
+    <line x1="40" y1="124" x2="960" y2="124" stroke="url(#goldStreak)" stroke-width="1.8" class="speed-line-slow" />
+    <line x1="120" y1="162" x2="880" y2="162" stroke="url(#speedStreak)" stroke-width="1.5" class="speed-line-fast" />
+    <line x1="220" y1="184" x2="780" y2="184" stroke="url(#speedStreak)" stroke-width="1.2" class="speed-line-med" />
+  </g>
+
+  <!-- Dynamic Motion Particle Accents -->
+  <g fill="#10B981" opacity="0.5">
+    <circle cx="180" cy="58" r="2">
+      <animate attributeName="cx" values="120; 880" dur="2.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 0.9; 0" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="260" cy="124" r="2.5">
+      <animate attributeName="cx" values="80; 920" dur="3.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 1; 0" dur="3.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="340" cy="162" r="1.8">
+      <animate attributeName="cx" values="200; 800" dur="3.1s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 0.8; 0" dur="3.1s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Kinetic Typography Group -->
+  <g class="motion-trail" filter="url(#kineticShadow)">
+    <!-- Speed Ghost Trails for Motion Effect -->
+    <text x="500" y="126" text-anchor="middle" font-size="88" class="kinetic-text" fill="#10B981" opacity="0.14" transform="translate(-16, 0)">NAGRIKAI</text>
+    <text x="500" y="126" text-anchor="middle" font-size="88" class="kinetic-text" fill="#10B981" opacity="0.25" transform="translate(-8, 0)">NAGRIKAI</text>
+    
+    <!-- Main Kinetic Title -->
+    <text x="500" y="126" text-anchor="middle" font-size="88" class="kinetic-text" fill="url(#nagrikGradient)">NAGRIKAI</text>
+  </g>
+
+  <!-- Dynamic Subtitle with Kinetic Track Lines -->
+  <g transform="skewX(-10)">
+    <line x1="240" y1="168" x2="360" y2="168" stroke="#10B981" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+    <text x="500" y="172" text-anchor="middle" font-size="14.5" class="kinetic-sub" fill="#1E5443">CIVIC INTELLIGENCE PLATFORM</text>
+    <line x1="640" y1="168" x2="760" y2="168" stroke="#10B981" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+  </g>
+
+  <!-- Bottom Accent Motion Dot -->
+  <circle cx="500" cy="196" r="3" fill="#10B981" opacity="0.9">
+    <animate attributeName="r" values="2.5; 4.5; 2.5" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6; 1; 0.6" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>
