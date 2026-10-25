@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="100%" height="220" style="background: transparent; overflow: hidden;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 180" width="100%" height="180" style="background: transparent; overflow: hidden;">
   <defs>
     <!-- Motion Gradients -->
     <linearGradient id="nagrikGradient" x1="-100%" y1="0%" x2="200%" y2="0%">
@@ -50,15 +50,9 @@
 
     <style>
       .kinetic-text {
-        font-family: 'Cinzel', 'Playfair Display', 'Georgia', serif;
+        font-family: 'Cinzel', 'Playfair Display', 'Georgia', 'Segoe UI', serif;
         font-weight: 800;
         letter-spacing: 0.18em;
-        text-transform: uppercase;
-      }
-      .kinetic-sub {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        font-weight: 600;
-        letter-spacing: 0.38em;
         text-transform: uppercase;
       }
       .speed-line-fast {
@@ -92,24 +86,23 @@
 
   <!-- Kinetic Motion Speed Streaks (Background Lines) -->
   <g opacity="0.65">
-    <line x1="80" y1="58" x2="920" y2="58" stroke="url(#speedStreak)" stroke-width="2" class="speed-line-fast" />
-    <line x1="160" y1="82" x2="840" y2="82" stroke="url(#speedStreak)" stroke-width="1.5" class="speed-line-med" />
-    <line x1="40" y1="124" x2="960" y2="124" stroke="url(#goldStreak)" stroke-width="1.8" class="speed-line-slow" />
-    <line x1="120" y1="162" x2="880" y2="162" stroke="url(#speedStreak)" stroke-width="1.5" class="speed-line-fast" />
-    <line x1="220" y1="184" x2="780" y2="184" stroke="url(#speedStreak)" stroke-width="1.2" class="speed-line-med" />
+    <line x1="80" y1="42" x2="920" y2="42" stroke="url(#speedStreak)" stroke-width="2" class="speed-line-fast" />
+    <line x1="160" y1="72" x2="840" y2="72" stroke="url(#speedStreak)" stroke-width="1.5" class="speed-line-med" />
+    <line x1="40" y1="112" x2="960" y2="112" stroke="url(#goldStreak)" stroke-width="1.8" class="speed-line-slow" />
+    <line x1="120" y1="148" x2="880" y2="148" stroke="url(#speedStreak)" stroke-width="1.5" class="speed-line-fast" />
   </g>
 
   <!-- Dynamic Motion Particle Accents -->
   <g fill="#10B981" opacity="0.5">
-    <circle cx="180" cy="58" r="2">
+    <circle cx="180" cy="42" r="2">
       <animate attributeName="cx" values="120; 880" dur="2.4s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0; 0.9; 0" dur="2.4s" repeatCount="indefinite" />
     </circle>
-    <circle cx="260" cy="124" r="2.5">
+    <circle cx="260" cy="112" r="2.5">
       <animate attributeName="cx" values="80; 920" dur="3.8s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0; 1; 0" dur="3.8s" repeatCount="indefinite" />
     </circle>
-    <circle cx="340" cy="162" r="1.8">
+    <circle cx="340" cy="148" r="1.8">
       <animate attributeName="cx" values="200; 800" dur="3.1s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0; 0.8; 0" dur="3.1s" repeatCount="indefinite" />
     </circle>
@@ -118,23 +111,10 @@
   <!-- Kinetic Typography Group -->
   <g class="motion-trail" filter="url(#kineticShadow)">
     <!-- Speed Ghost Trails for Motion Effect -->
-    <text x="500" y="126" text-anchor="middle" font-size="88" class="kinetic-text" fill="#10B981" opacity="0.14" transform="translate(-16, 0)">NAGRIKAI</text>
-    <text x="500" y="126" text-anchor="middle" font-size="88" class="kinetic-text" fill="#10B981" opacity="0.25" transform="translate(-8, 0)">NAGRIKAI</text>
+    <text x="500" y="118" text-anchor="middle" font-size="88" class="kinetic-text" fill="#10B981" opacity="0.14" transform="translate(-16, 0)">NAGRIKAI</text>
+    <text x="500" y="118" text-anchor="middle" font-size="88" class="kinetic-text" fill="#10B981" opacity="0.25" transform="translate(-8, 0)">NAGRIKAI</text>
     
     <!-- Main Kinetic Title -->
-    <text x="500" y="126" text-anchor="middle" font-size="88" class="kinetic-text" fill="url(#nagrikGradient)">NAGRIKAI</text>
+    <text x="500" y="118" text-anchor="middle" font-size="88" class="kinetic-text" fill="url(#nagrikGradient)">NAGRIKAI</text>
   </g>
-
-  <!-- Dynamic Subtitle with Kinetic Track Lines -->
-  <g transform="skewX(-10)">
-    <line x1="240" y1="168" x2="360" y2="168" stroke="#10B981" stroke-width="2" stroke-linecap="round" opacity="0.75" />
-    <text x="500" y="172" text-anchor="middle" font-size="14.5" class="kinetic-sub" fill="#1E5443">CIVIC INTELLIGENCE PLATFORM</text>
-    <line x1="640" y1="168" x2="760" y2="168" stroke="#10B981" stroke-width="2" stroke-linecap="round" opacity="0.75" />
-  </g>
-
-  <!-- Bottom Accent Motion Dot -->
-  <circle cx="500" cy="196" r="3" fill="#10B981" opacity="0.9">
-    <animate attributeName="r" values="2.5; 4.5; 2.5" dur="2s" repeatCount="indefinite" />
-    <animate attributeName="opacity" values="0.6; 1; 0.6" dur="2s" repeatCount="indefinite" />
-  </circle>
 </svg>

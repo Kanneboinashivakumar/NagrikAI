@@ -1,13 +1,11 @@
 <div align="center">
 
-<img src="./NagrikAI-assets/nagrikai-motion.svg" alt="NagrikAI Civic Intelligence Platform" width="800" />
+<img src="./NagrikAI-assets/nagrikai-motion.svg" alt="NagrikAI" width="780" />
 
-# *N A G R I K A I*
-
-### *Civic Intelligence Platform*
-
-**Give Every Civic Problem a Memory.**  
-*A community-powered platform transforming everyday observations into persistent, evidence-backed civic incidents.*
+<p align="center">
+  <strong>Give Every Civic Problem a Memory.</strong><br/>
+  <em>A community-powered civic intelligence platform transforming everyday observations into persistent, evidence-backed civic incidents.</em>
+</p>
 
 <br/>
 
