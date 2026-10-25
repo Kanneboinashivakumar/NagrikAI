@@ -4,7 +4,7 @@
 
 <p align="center">
   <strong>Give Every Civic Problem a Memory.</strong><br/>
-  <em>A community-powered civic intelligence platform transforming everyday observations into persistent, evidence-backed civic incidents.</em>
+  <em>A community-powered platform transforming everyday observations into persistent, evidence-backed civic incidents.</em>
 </p>
 
 <br/>
